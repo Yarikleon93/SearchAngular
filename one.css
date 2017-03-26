@@ -1,0 +1,146 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.top {
+    background-color: #373737;
+    height: 40px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+}
+.top p {
+    margin:0;
+    padding: 10px;
+    color: white;
+    text-shadow: 1px 1px 4px blue;
+    font-size: 19px;
+}
+#content {
+    
+    background-color: #C0C0C0;
+}
+.content {
+    background: linear-gradient(to bottom, #BFBFBF, white);
+    width: 100%;
+    min-height: 90%;
+    max-height: 100%;
+    position: absolute;
+}
+.content>p {
+    padding-left: 20px;
+    width: 85%;
+}
+.search {
+    margin-left: 23px;
+}
+input[type=text] {
+    width: 83%;
+    border: none;
+    height: 20px;
+    background: inherit;
+    border-bottom: 2px solid #446AEE;
+    background-image: url('search.png');
+    background-repeat: no-repeat;
+    background-size: 19px;
+    padding-left: 30px;
+}
+input[type=text]:focus {
+    border-color: #0B0FDA;
+    outline: 0;
+}
+button {
+    background-color: #A1A1A1;
+    outline: 0;
+    border: none;
+    height: 30px;
+    width: 140px;
+}
+button[type=submit] {
+    width: 45px;
+}
+.rec_search>p:first-child {
+    width: 83%;
+    border-bottom: 1px solid #878787;
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+.rec_search a p {
+    width: 83%;
+    padding: 0;
+    margin-left:23px;
+    margin-top: 0;
+    height: 22px;
+    margin-bottom: 0px;
+    color: black;
+    padding-top: 8px;
+    border-bottom: 1px solid #B2B2B2;
+}
+.rec_search a p:hover {
+    background-color: #949494;
+}
+.rec_search a {
+    text-decoration: none;
+}
+.all_element {
+    height: 70px;
+    border-bottom: 1px solid #878787;
+}
+.element {
+    margin: 7px 0 0 7px; 
+    background: no-repeat  url("https://imgs.nestimg.com/medium/flat_leeds_7270116488803743418.jpg");
+    height: 85%;
+    width: 23%;
+    float: left;
+}
+.content>a {
+    text-decoration: none;
+}
+table {
+    border-spacing: 9px;
+    color: #373737;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-weight: 120px;
+}
+h2 {
+    margin: 5px 0 0 0;
+    padding-left: 27px;box-shadow: 0px 5px 39px -9px rgba(100,97,255,1);
+}
+h3 {
+    margin: 7px 0 0 0;
+    padding-left: 25px;
+    font-size: 21px;box-shadow: 0px 4px 39px -7px rgba(100,97,255,1);
+}
+img {
+    width: 100%;
+    height: 250px;
+}
+.search_price input {
+    border: none;
+    width: 110px;
+    height: 20px;
+    background: inherit;
+    border-bottom: 2px solid #446AEE;
+    margin-bottom: 7px;
+}
+.search_price input:focus {
+    outline: 0;
+}
+.search_price {
+    padding: 5px;
+    border-bottom: 1px dotted #A1A1A1;
+}
+.search_price ::-webkit-input-placeholder {
+  color: #272727;
+  opacity: 0.9;
+}
+.search_price a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: #272727;
+    border-bottom: 2px solid #446AEE;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
