@@ -5,11 +5,13 @@
     <div class="content">
         <p>Use the form below to search for houses to buy. You can search by place-name, postcode, or click 'My location', to search in your current location!</p>
         <div class="search">
+            <form novalidate ng-submit="navigateToSearch(query)">
                 <br>
                 <input id = "inp1" type="text" placeholder="Search" ng-model="query">
                 <br><br><br>
-                <a href="search/?q={{query}}">go</a>
+                <button type="submit">GO</button>
                 <button type="button">My Location</button>
+            </form>
         </div>
     </div>
 </div>
