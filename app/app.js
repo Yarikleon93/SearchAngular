@@ -1,5 +1,5 @@
-var App = angular.module('App' , ['ngRoute'])
-    .config(function($routeProvider, $locationProvider){
+var App = angular.module('App' , ['ngSanitize', 'ngRoute'])
+    .config(function($routeProvider,$locationProvider){
         $routeProvider.when('/', {
             templateUrl: '/app/views/home.html',
             controller: 'mainController'
@@ -8,5 +8,8 @@ var App = angular.module('App' , ['ngRoute'])
             templateUrl: "/app/views/search.html",
             controller: "searchController"
         })
-        $locationProvider.html5Mode(true);
+        .when('/apartment/:longitude', {
+            templateUrl: "/app/views/apartment.html",
+            controller: "apartmentController"
+        })
     });

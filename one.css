@@ -41,7 +41,7 @@ input[type=text] {
     height: 20px;
     background: inherit;
     border-bottom: 2px solid #446AEE;
-    background-image: url('search.png');
+    background-image: url('img/search.png');
     background-repeat: no-repeat;
     background-size: 19px;
     padding-left: 30px;
@@ -119,7 +119,7 @@ img {
 }
 .search_price input {
     border: none;
-    width: 110px;
+    width: 31%;
     height: 20px;
     background: inherit;
     border-bottom: 2px solid #446AEE;
@@ -143,4 +143,8 @@ img {
     border-bottom: 2px solid #446AEE;
     opacity: 0.9;
     margin-bottom: 10px;
+}
+table img {
+    width: 19px;
+    height: 19px;
 }

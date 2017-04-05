@@ -1,16 +1,16 @@
 App.controller('mainController', ["$scope", 
                                     "houseService",
-                                    "$route",
                                     "$location",
-                                    "$routeParams", 
                                     MainController]);
 
-function MainController($scope, houseService, $route, $location, $routeParam){
+function MainController($scope, houseService, $location){
     $scope.getHouses = function(){
         houseService.getHouses().then(function(data){
+        $scope.allApartment = data.data[0].response.listings;
         },function(error){
         })
     };
+    
 
     $scope.navigateToSearch = function (query) {
         $location.path('/search/' + query)

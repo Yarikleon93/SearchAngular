@@ -1,1 +1,28 @@
-<p>bla</p>
+<div class="top">
+        <p>PropertyCross</p>
+    </div>
+    <div id="content">
+        <div class="search_price">
+            <input type="number" placeholder="Цена от" id="price_from" ng-model="minPrice">
+            <input type="number"placeholder="Цена до" id="price_to"  ng-model="maxPrice">
+            <input type="number"placeholder="Комнат" ng-model="maxRooms">
+            <br>
+            <a href="">От дешевых</a><a href="">От дорогих</a>
+        </div>
+        <div class="content">
+            <a href="#!/apartment/{{apartment.longitude}}" ng-repeat="apartment in allApartment | filter:filterAllApartment"> 
+                <div class="all_element">
+                    <div class="element" style="background: no-repeat url({{apartment.thumb_url}})"></div>
+                    <table>
+                        <tr>
+                            <td style="white-space: nowrap;">Price: {{apartment.price_currency}}{{apartment.price}}</td>
+                            <td rowspan="2"><img ng-repeat="i in createDynamicArray(apartment.bedroom_number) track by $index" src="img/agt_home.png"></td>
+                        </tr>
+                        <tr>
+                            <td style="white-space: nowrap;">{{apartment.lister_name}}</td>
+                        </tr>
+                    </table>
+                </div>      
+            </a>
+        </div>
+    </div>
