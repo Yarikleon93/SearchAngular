@@ -11,11 +11,14 @@ function ApartmentController($scope, houseService, $route, $location, $routePara
         houseService.getHouses().then(function(data){
         $scope.allApartment = data.data[0].response.listings;
         getApartmentByLongitude($routeParams.longitude).then(function(apartment) {
-            $scope.apartment = apartment;
+            $scope.$apply(function() {
+                    $scope.apartment = apartment;
+                })
         });
         },function(error){
         })
     };
+    
     function getApartmentByLongitude(longitude) {
         return new Promise(function(resolve, reject) {
             $scope.allApartment.forEach(function(apartment) {

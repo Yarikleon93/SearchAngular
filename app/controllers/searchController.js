@@ -11,32 +11,35 @@ function SearchController($scope, houseService, $routeParams){
         })
     };
     $scope.filterAllApartment = function (obj) {
-    //    return $scope.$watch('minPrice', function (newVal, oldVal) {
-    //        var min = 0;
-    //        if (!newVal) return;
-    //     });
+        // var min = 0;
+        // var max = 9999999999999999;
+        // if (typeof $scope.minPrice != 'undefined') {
+        //     min = $scope.minPrice;
+        //     return obj.price >= min;
+        // }
+        // else if (typeof $scope.maxPrice != 'undefined' && $scope.minPrice != '') {
+        //     max = $scope.maxPrice;
+        //     return obj.price <= max;
+        // }
+        // else {
+        //     return obj.price;
+        // }
+        $scope.filterAllApartment = function (obj) {
+    
         var min = 0;
-        var max = 9999999999999999;
+        var max = Number.MAX_VALUE;
         if (typeof $scope.minPrice != 'undefined') {
             min = $scope.minPrice;
-            return obj.price >= min;
         }
-        else if (typeof $scope.maxPrice != 'undefined' && $scope.minPrice != '') {
+        if (typeof $scope.maxPrice != 'undefined') {
             max = $scope.maxPrice;
-            return obj.price <= max;
         }
-        // else if (typeof $scope.maxRooms != 'undefined') {
-        //     maxR = $scope.maxRooms;
-        // }
-        else {
-            return obj.price;
+        
+        if (obj.price >= min && obj.price <= max) {
+            return obj
         }
     }
-    // for (var i = 1; i<$scope.allApartment.bedroom_number; i++) {
-    // var bedroom_for = '<img src="img/agt_home.png">';
-    //     bedroom_for = $scope.bedroom+bedroom_for;
-    //     $scope.bedroom = bedroom_for;
-    // }
+    }
     
 
     $scope.createDynamicArray = function(num) {
